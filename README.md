@@ -1,9 +1,9 @@
 ![Agent Design Patterns](assets/banner.png)
 
-https://github.com/csmedeiros/agent-design-patterns/raw/main/assets/demo.mp4
+<video src="https://github.com/csmedeiros/agent-design-patterns/raw/main/assets/demo.mp4" controls muted width="100%"></video>
 
 > A 56-second walkthrough of the five control-flow shapes. If the player doesn't load,
-> [download the demo](assets/demo.mp4).
+> [watch the demo](https://github.com/csmedeiros/agent-design-patterns/raw/main/assets/demo.mp4).
 
 # agent-design-patterns
 
