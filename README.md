@@ -3,6 +3,10 @@
 A Claude Code plugin that teaches the `agent-design-patterns` skill: how to structure a
 multi-agent task as a `Workflow` using Google Cloud's validated agentic-AI design patterns.
 
+This plugin is based on and inspired by Google Cloud's article
+[Choose a design pattern for your agentic AI system](https://docs.cloud.google.com/architecture/choose-design-pattern-agentic-ai-system),
+which the pattern markdown files map onto Claude Code's `Workflow` primitives.
+
 ## What it does
 
 When you ask Claude Code to orchestrate a task across multiple subagents ("fan out", "run a
@@ -18,7 +22,7 @@ control-flow shape that matches the task and points to a ready-to-adapt `Workflo
 | Big ambiguous task → decompose recursively | Hierarchical | `agent(plan)` → `pipeline()` over units |
 
 Each pattern's markdown (`skills/agent-design-patterns/patterns/`) includes a copyable Workflow
-template and a real open-PR test case to validate it against.
+template.
 
 ## Install
 
