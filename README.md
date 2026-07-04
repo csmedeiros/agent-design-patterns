@@ -28,14 +28,20 @@ template.
 
 ## Install
 
-Add this directory as a plugin marketplace source, or drop it into your Claude Code plugins
-directory. See the [Claude Code plugin docs](https://docs.claude.com/en/docs/claude-code) for
-the exact install flow for your setup.
+This repo is itself a plugin marketplace. Add it, then install the plugin:
+
+```
+/plugin marketplace add /Users/claudiomedeiros/Documents/agent-design-patterns
+/plugin install agent-design-patterns@agent-design-patterns
+```
+
+(Or point `/plugin marketplace add` at this repo's GitHub URL once pushed remotely.)
 
 ## Structure
 
 ```
 .claude-plugin/plugin.json      # plugin manifest
+.claude-plugin/marketplace.json # marketplace manifest (lists this plugin)
 skills/agent-design-patterns/
   SKILL.md                      # entry point: picks the pattern by task shape
   patterns/

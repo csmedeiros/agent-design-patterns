@@ -1,0 +1,13 @@
+{
+  "name": "agent-design-patterns",
+  "owner": {
+    "name": "Caio Medeiros"
+  },
+  "plugins": [
+    {
+      "name": "agent-design-patterns",
+      "source": "./",
+      "description": "Maps Google Cloud's validated multi-agent design patterns (Sequential, Parallel, Loop, Coordinator, Hierarchical) onto Claude Code's dynamic Workflow tool, so multi-agent orchestration follows a proven control-flow shape instead of an improvised one."
+    }
+  ]
+}
