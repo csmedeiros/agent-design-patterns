@@ -1,3 +1,5 @@
+![Agent Design Patterns](assets/banner.png)
+
 # agent-design-patterns
 
 A Claude Code plugin that teaches the `agent-design-patterns` skill: how to structure a
