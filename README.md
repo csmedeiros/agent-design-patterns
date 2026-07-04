@@ -1,2 +1,41 @@
-# agent-design-patters
-Enables Claude Code use Multi Agents Design Patters validated by Google on its Dynamic Workflows
+# agent-design-patterns
+
+A Claude Code plugin that teaches the `agent-design-patterns` skill: how to structure a
+multi-agent task as a `Workflow` using Google Cloud's validated agentic-AI design patterns.
+
+## What it does
+
+When you ask Claude Code to orchestrate a task across multiple subagents ("fan out", "run a
+workflow for", "orchestrate this with subagents", "which agent pattern"), this skill picks the
+control-flow shape that matches the task and points to a ready-to-adapt `Workflow` template:
+
+| Task shape | Pattern | Primitive |
+|---|---|---|
+| Fixed ordered stages, each feeds the next | Sequential | `pipeline()` (1 item) |
+| Independent subtasks, no shared state | Parallel | `parallel()` |
+| Repeat until an exit condition / dry | Loop | `while` + `agent()` |
+| Analyze, then route each part to a specialist | Coordinator | classify → `parallel()` by route |
+| Big ambiguous task → decompose recursively | Hierarchical | `agent(plan)` → `pipeline()` over units |
+
+Each pattern's markdown (`skills/agent-design-patterns/patterns/`) includes a copyable Workflow
+template and a real open-PR test case to validate it against.
+
+## Install
+
+Add this directory as a plugin marketplace source, or drop it into your Claude Code plugins
+directory. See the [Claude Code plugin docs](https://docs.claude.com/en/docs/claude-code) for
+the exact install flow for your setup.
+
+## Structure
+
+```
+.claude-plugin/plugin.json      # plugin manifest
+skills/agent-design-patterns/
+  SKILL.md                      # entry point: picks the pattern by task shape
+  patterns/
+    sequential.md
+    parallel.md
+    loop.md
+    coordinator.md
+    hierarchical.md
+```
